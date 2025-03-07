@@ -24,7 +24,7 @@ export async function login(page) {
     const proceedButton = await page.locator('button:has-text("ดำเนินการต่อ")');
     await proceedButton.waitFor({ state: 'visible', timeout: 60000 });  // เพิ่มเวลา timeout
     await proceedButton.click();
-    await page.waitForTimeout(3000);
+    await page.waitForTimeout(10000);
 
     // await page.waitForSelector('a[data-qa="ssb_redirect_open_in_browser"]:has-text("use Slack in your browser")', { timeout: 60000 });  // เพิ่มเวลา timeout
     
