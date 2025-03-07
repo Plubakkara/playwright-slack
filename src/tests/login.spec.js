@@ -11,7 +11,8 @@ test('Sign in with Google and proceed', async ({ page }) => {
 test.only('Create group(My Quizzes)', async ({ page }) => {
     await login(page);
 
-    await page.goto('https://app.slack.com/client/T08GJMRP2HK/D08HBBU21FS', { timeout: 60000 }); // รอ 1 นาที
+    await page.goto('https://app.slack.com/client/T08GJMRP2HK/D08HBBU21FS', { timeout: 60000 });
+    await page.waitForLoadState('load'); // new
 
     console.log('Current URL:', page.url());
         
